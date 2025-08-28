@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "124293755711",
+    "project_id": "authkotlin-7c068",
+    "storage_bucket": "authkotlin-7c068.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:124293755711:android:bceac322b43d1092ced98a",
+        "android_client_info": {
+          "package_name": "com.hoamz.auth"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "124293755711-2l4ktrepjnb1a74iml7k2ssq58mgv4um.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.hoamz.auth",
+            "certificate_hash": "c491348af71d88f7435662548a632dabf604fbea"
+          }
+        },
+        {
+          "client_id": "124293755711-g64n9iqe3u1dhocgob2imrjj3s6dvmm0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA49gxsWGrf_NHV13YyfkNwHke4D3eFI6o"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "124293755711-g64n9iqe3u1dhocgob2imrjj3s6dvmm0.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

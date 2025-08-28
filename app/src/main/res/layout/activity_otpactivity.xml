@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:fitsSystemWindows="true"
+    tools:context=".OTPActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:paddingVertical="20dp"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/verifyOTPBtn"
+            android:layout_width="0dp"
+            android:layout_height="55dp"
+            android:layout_marginHorizontal="32dp"
+            android:layout_marginTop="16dp"
+            android:backgroundTint="@color/btn_color"
+            android:text="Verify"
+            android:textColor="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/resendTextView" />
+
+        <TextView
+            android:id="@+id/resendTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:text="Resend OTP"
+            android:textSize="16sp"
+            android:textColor="@color/black"
+            app:layout_constraintStart_toStartOf="@+id/verifyOTPBtn"
+            app:layout_constraintTop_toBottomOf="@id/otpEditText1" />
+
+        <com.hoamz.auth.OtpEditText
+            android:id="@+id/otpEditText1"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_marginStart="24dp"
+            android:background="@drawable/edit_text_bg"
+            android:ems="10"
+            android:gravity="center"
+            app:layout_constraintEnd_toStartOf="@id/otpEditText2"
+            android:inputType="number"
+            android:textStyle="bold"
+            android:maxLength="1"
+            android:layout_marginTop="40dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/otpProgressBar"/>
+
+        <com.hoamz.auth.OtpEditText
+            android:id="@+id/otpEditText2"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:background="@drawable/edit_text_bg"
+            android:ems="10"
+            android:gravity="center"
+            android:layout_marginTop="40dp"
+            android:textStyle="bold"
+            android:maxLength="1"
+            android:inputType="number"
+            app:layout_constraintEnd_toStartOf="@+id/otpEditText3"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/otpEditText1"
+            app:layout_constraintTop_toBottomOf="@id/otpProgressBar" />
+
+        <com.hoamz.auth.OtpEditText
+            android:id="@+id/otpEditText3"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:background="@drawable/edit_text_bg"
+            android:ems="10"
+            android:inputType="number"
+            android:gravity="center"
+            android:layout_marginTop="40dp"
+            android:textStyle="bold"
+            android:maxLength="1"
+            app:layout_constraintTop_toBottomOf="@id/otpProgressBar"
+            app:layout_constraintEnd_toStartOf="@+id/otpEditText4"
+            app:layout_constraintStart_toEndOf="@+id/otpEditText2" />
+
+        <com.hoamz.auth.OtpEditText
+            android:id="@+id/otpEditText4"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:background="@drawable/edit_text_bg"
+            android:ems="10"
+            android:inputType="number"
+            android:gravity="center"
+            android:layout_marginTop="40dp"
+            android:maxLength="1"
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@id/otpProgressBar"
+            app:layout_constraintEnd_toStartOf="@+id/otpEditText5"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/otpEditText3" />
+
+        <com.hoamz.auth.OtpEditText
+            android:id="@+id/otpEditText5"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:background="@drawable/edit_text_bg"
+            android:ems="10"
+            android:inputType="number"
+            android:gravity="center"
+            android:layout_marginTop="40dp"
+            android:maxLength="1"
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@id/otpProgressBar"
+            app:layout_constraintEnd_toStartOf="@+id/otpEditText6"
+            app:layout_constraintStart_toEndOf="@+id/otpEditText4" />
+
+        <com.hoamz.auth.OtpEditText
+            android:id="@+id/otpEditText6"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_marginEnd="24dp"
+            android:background="@drawable/edit_text_bg"
+            android:ems="10"
+            android:layout_marginTop="40dp"
+            android:inputType="number"
+            android:gravity="center"
+            android:maxLength="1"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/otpEditText5"
+            app:layout_constraintTop_toBottomOf="@id/otpProgressBar" />
+
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="match_parent"
+            android:layout_height="380dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/otp_verification" />
+
+        <ProgressBar
+            android:id="@+id/otpProgressBar"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:indeterminateTint="@color/btn_color"
+            android:layout_marginTop="50dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
