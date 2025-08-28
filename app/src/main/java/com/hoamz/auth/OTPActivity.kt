@@ -209,7 +209,10 @@ class OTPActivity : BaseActivity() {
         ) {
 
         }
+    }
 
+    override fun onToast(msg: String) {
+        super.onToast(msg)
     }
 
 }
