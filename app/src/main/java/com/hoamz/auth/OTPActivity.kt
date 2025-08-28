@@ -215,4 +215,11 @@ class OTPActivity : BaseActivity() {
         super.onToast(msg)
     }
 
+
+    override fun showDialogNotify(msg: String) {
+        super.showDialogNotify(msg)
+        // ham nay se duoc day ne nhanh 'hoa'
+    }
+
+
 }
