@@ -1,12 +1,15 @@
 package com.hoamz.auth
 
 import android.content.Context
+import android.text.Editable
 import android.util.AttributeSet
 import android.view.KeyEvent
 import androidx.appcompat.widget.AppCompatEditText
 
-class OtpEditText(context: Context, attrs: AttributeSet) : AppCompatEditText(context, attrs) {
 
+
+
+class OtpEditText(context: Context, attrs: AttributeSet? = null) : AppCompatEditText(context, attrs) {
     var onBackspaceListener: (() -> Unit)? = null
 
     override fun onKeyPreIme(keyCode: Int, event: KeyEvent): Boolean {

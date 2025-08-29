@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="OtpLayout">
+        <attr name="numberOtp" format="integer" />
+        <attr name="colorBackground" format="color" />
+        <attr name="colorText" format="color" />
+        <attr name="shapeOtp" format="reference" />
+        <attr name="heightOtp" format="dimension" />
+    </declare-styleable>
+</resources>
