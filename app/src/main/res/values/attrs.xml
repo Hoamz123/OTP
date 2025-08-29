@@ -5,6 +5,11 @@
         <attr name="colorBackground" format="color" />
         <attr name="colorText" format="color" />
         <attr name="shapeOtp" format="reference" />
-        <attr name="heightOtp" format="dimension" />
+        <attr name="sizeOtp" format="dimension" />
+        <attr name="textStyleOtp" format="enum">
+            <enum name="normal" value="0"/>
+            <enum name="bold" value="1"/>
+            <enum name="italic" value="2"/>
+        </attr>
     </declare-styleable>
 </resources>

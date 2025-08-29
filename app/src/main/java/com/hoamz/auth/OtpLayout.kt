@@ -1,21 +1,16 @@
 package com.hoamz.auth
 
-import android.R.attr.gravity
-import android.annotation.SuppressLint
+
 import android.content.Context
 import android.graphics.Color
-import android.graphics.drawable.ColorDrawable
+import android.graphics.Typeface
 import android.graphics.drawable.Drawable
 import android.text.InputFilter
 import android.util.AttributeSet
 import android.view.Gravity
-import android.view.View
-import android.widget.LinearLayout
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.constraintlayout.widget.ConstraintSet
 import androidx.core.content.ContextCompat
-import androidx.core.content.res.TypedArrayUtils.getResourceId
-import androidx.core.util.TypedValueCompat.dpToPx
 import androidx.core.widget.addTextChangedListener
 
 class OtpLayout @JvmOverloads constructor(
@@ -34,11 +29,6 @@ class OtpLayout @JvmOverloads constructor(
         createOtpFields()
     }
 
-
-    fun setNumberOtp(num : Int){
-        this.numberOtp = num
-    }
-    @SuppressLint("ResourceAsColor")
     private fun createOtpFields() {
         editTexts.clear()
         removeAllViews()
@@ -48,15 +38,21 @@ class OtpLayout @JvmOverloads constructor(
                 id = generateViewId()
                 gravity = Gravity.CENTER
                 filters = arrayOf(InputFilter.LengthFilter(1))
-                setBackgroundColor(Color.LTGRAY)
                 val shapeResId = typedArray.getResourceId(R.styleable.OtpLayout_shapeOtp, 0)
                 val shape: Drawable? = if (shapeResId != 0) { ContextCompat.getDrawable(context, shapeResId) } else null
                 background = shape
+                val sizeOtp = typedArray.getDimensionPixelSize(R.styleable.OtpLayout_sizeOtp,45)
+                width = sizeOtp
+                height = sizeOtp
+                val textColor = typedArray.getColor(R.styleable.OtpLayout_colorText, Color.BLACK)
+                setTextColor(textColor)
+                val textStyle = typedArray.getInt(R.styleable.OtpLayout_textStyleOtp, 0)
+                when(textStyle){
+                    0 -> setTypeface(null, Typeface.NORMAL)
+                    1 -> setTypeface(null, Typeface.BOLD)
+                    2 -> setTypeface(null, Typeface.ITALIC)
+                }
             }
-            otp.width = dpToPx(45)
-            otp.height = dpToPx(45)
-            val textColor = typedArray.getColor(R.styleable.OtpLayout_colorText, Color.BLACK)
-            otp.setTextColor(textColor)
             // backspace -> focus ô trước
             otp.onBackspaceListener = {
                 if (i > 0) editTexts[i - 1].requestFocus()

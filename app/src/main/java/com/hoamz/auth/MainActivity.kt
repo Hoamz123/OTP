@@ -28,7 +28,6 @@ class MainActivity : BaseActivity() {
         setContentView(binding.root)
 
 
-        binding.otp.setNumberOtp(4)
 
         binding.signOutBtn.setOnClickListener {
             onToast(binding.otp.getOtp())

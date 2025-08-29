@@ -1,12 +1,9 @@
 package com.hoamz.auth
 
 import android.content.Context
-import android.text.Editable
 import android.util.AttributeSet
 import android.view.KeyEvent
 import androidx.appcompat.widget.AppCompatEditText
-
-
 
 
 class OtpEditText(context: Context, attrs: AttributeSet? = null) : AppCompatEditText(context, attrs) {
